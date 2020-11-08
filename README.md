@@ -1,2 +1,2 @@
-# DiarySofetware
+# DiarySoftware
 BlaBlaBlaBla
