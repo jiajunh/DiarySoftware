@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.register.RegisterController">
+   <children>
+      <PasswordField layoutX="223.0" layoutY="124.0" prefHeight="27.0" prefWidth="230.0" promptText="字母和数字，至少6个字符" />
+      <Label layoutX="246.0" layoutY="52.0" text="Regist">
+         <font>
+            <Font name="Monaco" size="30.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="223.0" layoutY="166.0" prefHeight="27.0" prefWidth="230.0" promptText="包含数字，字母和特殊符号" />
+      <PasswordField layoutX="223.0" layoutY="208.0" prefHeight="27.0" prefWidth="230.0" promptText="确认密码" />
+      <PasswordField layoutX="223.0" layoutY="295.0" prefHeight="27.0" prefWidth="230.0" promptText="验证码答案" />
+      <Label layoutX="119.0" layoutY="126.0" text="用户名">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="168.0" text="密码">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="210.0" text="确认密码">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="257.0" text="验证码">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="297.0" text="验证码答案">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="register" layoutX="222.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="24.0" prefWidth="230.0" text="Sign Up">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="registerBack" fitHeight="39.0" fitWidth="36.0" layoutX="32.0" layoutY="33.0" onMouseClicked="#handleRegisterBackButton">
+         <image>
+            <Image url="@../../../images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

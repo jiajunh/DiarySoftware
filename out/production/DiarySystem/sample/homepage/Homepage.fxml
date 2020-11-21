@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.homepage.HomepageController">
+   <children>
+      <ImageView fx:id="superShiro" fitHeight="350.0" fitWidth="260.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/IMG_0005.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="326.0" layoutY="103.0" text="Diary System">
+         <font>
+            <Font name="Monaco" size="26.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordInput" layoutX="337.0" layoutY="233.0" promptText="password" />
+      <Button fx:id="login" layoutX="441.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="28.0" prefWidth="73.0" text="Login">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="signUp" layoutX="326.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleRegisterButton" text="Sign Up">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userNameInput" layoutX="337.0" layoutY="177.0" />
+      <ImageView fx:id="lockIcon" fitHeight="27.0" fitWidth="27.0" layoutX="293.0" layoutY="233.0">
+         <image>
+            <Image url="@../../../images/uniE6C0.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="userIcon" fitHeight="28.0" fitWidth="27.0" layoutX="293.0" layoutY="177.0">
+         <image>
+            <Image url="@../../../images/uniE90E.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

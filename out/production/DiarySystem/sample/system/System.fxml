@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.system.SystemControl">
+   <children>
+      <Label layoutX="280.0" layoutY="110.0" text="Diary System">
+         <font>
+            <Font name="Monaco" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="writeDiary" layoutX="257.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleWriteDiaryButton" text="Write Diary">
+         <font>
+            <Font name="Monaco" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="readDiary" layoutX="438.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleReadDiaryButton" text="Read Diary">
+         <font>
+            <Font name="Monaco" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="74.0" layoutY="149.0" text="被看光光了&gt;_&lt;">
+         <font>
+            <Font name="Monaco" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="logOut" layoutX="86.0" layoutY="251.0" onMouseClicked="#handleLogOutLabel" text="Log Out">
+         <font>
+            <Font name="Monaco" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
