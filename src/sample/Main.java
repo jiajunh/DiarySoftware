@@ -13,10 +13,12 @@ import sample.homepage.HomepageController;
 import sample.register.RegisterController;
 import sample.system.SystemControl;
 import sample.writeDiary.WriteDiaryController;
+import sample.Model.*;
 
 public class Main extends Application {
     private Stage stage;
     private Scene scene;
+    private User user;
 
     @Override
     public void start(Stage primaryStage) {
@@ -100,7 +102,17 @@ public class Main extends Application {
         return loader.getController();
     }
 
+    public Scene getScene() {
+        return scene;
+    }
 
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User u) {
+        this.user = u;
+    }
 
     public static void main(String[] args) {
         launch(args);

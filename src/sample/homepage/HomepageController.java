@@ -1,6 +1,9 @@
 package sample.homepage;
 
 import sample.Main;
+import sample.Model.*;
+import sample.SQLTools.*;
+import sample.SQLTools.*;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,6 +18,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
+import javafx.animation.FadeTransition;
+import javafx.util.Duration;
+
 
 public class HomepageController implements Initializable {
     @FXML
@@ -31,6 +38,8 @@ public class HomepageController implements Initializable {
     private ImageView lockIcon;
     @FXML
     private ImageView userIcon;
+    @FXML
+    private Label errorLabel;
 
     public Main mainApp = new Main();
     public void setMainApp(Main mainApp) {
@@ -46,7 +55,36 @@ public class HomepageController implements Initializable {
 
     @FXML
     public void handleLoginButton() {
-        mainApp.showSystemView();
+        String userName = userNameInput.getText();
+        String password = passwordInput.getText();
+        if (Checks.checkNamePwd(userName, password)) {
+            User user = JDBCTools.getUser(userName, password);
+            if (user == null) {
+                errorLabel.setText("Username/Password error");
+                userNameInput.clear();
+                passwordInput.clear();
+                FadeTransition ft = new FadeTransition();
+                ft.setDuration(Duration.seconds(0.1));
+                ft.setNode(mainApp.getScene().getRoot());
+                ft.setFromValue(0);
+                ft.setToValue(1);
+                ft.play();
+            }
+            else {
+                mainApp.showSystemView();
+            }
+        }
+        else {
+            errorLabel.setText("Username/Password format error");
+            userNameInput.clear();
+            passwordInput.clear();
+            FadeTransition ft = new FadeTransition();
+            ft.setDuration(Duration.seconds(0.1));
+            ft.setNode(mainApp.getScene().getRoot());
+            ft.setFromValue(0);
+            ft.setToValue(1);
+            ft.play();
+        }
     }
     @FXML
     public void handleRegisterButton() {

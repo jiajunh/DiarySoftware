@@ -17,6 +17,8 @@ import java.util.ResourceBundle;
 public class FindDiaryController implements Initializable {
     @FXML
     private ImageView searchIcon;
+    @FXML
+    private ImageView findBackIcon;
 
     public Main mainApp = new Main();
     public void setMainApp(Main mainApp) {
@@ -26,6 +28,12 @@ public class FindDiaryController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         searchIcon.setImage(new Image("file:images/search.png"));
+        findBackIcon.setImage(new Image("file:images/back.png"));
+    }
+
+    @FXML
+    public void handleFindBackIconButton() {
+        mainApp.showSystemView();
     }
 
 }

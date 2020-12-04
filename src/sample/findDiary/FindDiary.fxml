@@ -16,10 +16,15 @@
             <Font name="Monaco" size="28.0" />
          </font>
       </Label>
-      <PasswordField layoutX="559.0" layoutY="60.0" prefHeight="27.0" prefWidth="200.0" promptText="Input title for searching" />
+      <PasswordField layoutX="550.0" layoutY="60.0" prefHeight="27.0" prefWidth="200.0" promptText="Input title for searching" />
       <ImageView fx:id="searchIcon" fitHeight="32.0" fitWidth="32.0" layoutX="780.0" layoutY="60.0">
          <image>
             <Image url="@../../../images/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="findBackIcon" fitHeight="32.0" fitWidth="32.0" layoutX="64.0" layoutY="44.0" onMouseClicked="#handleFindBackIconButton">
+         <image>
+            <Image url="@../../../images/back.png" />
          </image>
       </ImageView>
    </children>
